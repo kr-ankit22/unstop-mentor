@@ -329,7 +329,7 @@ const AIMentor = ({ isOpen, onClose, streak, track, onOpenGold }) => {
             }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ background: 'white', padding: '6px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <img src="/logo.png" alt="AI" style={{ width: '20px', height: '20px' }} />
+                        <img src={`${import.meta.env.BASE_URL}logo.png`} alt="AI" style={{ width: '20px', height: '20px' }} />
                     </div>
                     <div>
                         <div style={{ fontWeight: 700, fontSize: '16px' }}>Nonstop AI</div>

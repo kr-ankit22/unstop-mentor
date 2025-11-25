@@ -51,7 +51,7 @@ function App() {
                   <h1 style={{ fontSize: '28px', fontWeight: 700, marginBottom: '8px' }}>Welcome back, Anurhea! 👋</h1>
                   <p style={{ opacity: 0.9 }}>You're on track to crack a Product Management role.</p>
                 </div>
-                <img src="/logo.png" style={{ height: '60px', opacity: 0.2, filter: 'brightness(0) invert(1)' }} />
+                <img src={`${import.meta.env.BASE_URL}logo.png`} style={{ height: '60px', opacity: 0.2, filter: 'brightness(0) invert(1)' }} />
               </div>
 
               {/* Recommended Opportunities */}
@@ -65,7 +65,7 @@ function App() {
                   {/* Card 1: ArisInfra */}
                   <div style={{ background: 'white', borderRadius: 'var(--radius-base)', padding: '16px', border: '1px solid var(--color-border)', transition: 'transform 0.2s', cursor: 'pointer' }}>
                     <div style={{ width: '48px', height: '48px', borderRadius: '8px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                      <img src="/arisinfra_logo.jpg" alt="ArisInfra" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                      <img src={`${import.meta.env.BASE_URL}arisinfra_logo.jpg`} alt="ArisInfra" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     </div>
                     <div style={{ fontSize: '12px', color: 'var(--color-text-secondary)', fontWeight: 600, marginBottom: '4px' }}>HIRING CHALLENGE</div>
                     <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}>ArisInfra Hiring Challenge</h3>
@@ -79,7 +79,7 @@ function App() {
                   {/* Card 2: BITS Pilani */}
                   <div style={{ background: 'white', borderRadius: 'var(--radius-base)', padding: '16px', border: '1px solid var(--color-border)', transition: 'transform 0.2s', cursor: 'pointer' }}>
                     <div style={{ width: '48px', height: '48px', borderRadius: '8px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                      <img src="/bits_pilani_management.gif" alt="BITS" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                      <img src={`${import.meta.env.BASE_URL}bits_pilani_management.gif`} alt="BITS" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     </div>
                     <div style={{ fontSize: '12px', color: 'var(--color-text-secondary)', fontWeight: 600, marginBottom: '4px' }}>COMPETITION</div>
                     <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}>BITS Pilani APOGEE</h3>
@@ -93,7 +93,7 @@ function App() {
                   {/* Card 3: ISB Hyderabad */}
                   <div style={{ background: 'white', borderRadius: 'var(--radius-base)', padding: '16px', border: '1px solid var(--color-border)', transition: 'transform 0.2s', cursor: 'pointer' }}>
                     <div style={{ width: '48px', height: '48px', borderRadius: '8px', marginBottom: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                      <img src="/isb_logo.png" alt="ISB" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                      <img src={`${import.meta.env.BASE_URL}isb_logo.png`} alt="ISB" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                     </div>
                     <div style={{ fontSize: '12px', color: 'var(--color-text-secondary)', fontWeight: 600, marginBottom: '4px' }}>CASE STUDY</div>
                     <h3 style={{ fontSize: '16px', fontWeight: 700, marginBottom: '8px' }}>ISB Hyderabad Envision</h3>

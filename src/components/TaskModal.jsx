@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, CheckCircle, ArrowRight } from 'lucide-react';
 
-const TaskModal = ({ isOpen, onClose, onCompleteTask }) => {
+const TaskModal = ({ isOpen, onClose, onCompleteTask, onOpenGold }) => {
     if (!isOpen) return null;
 
     const tasks = [
@@ -104,7 +104,7 @@ const TaskModal = ({ isOpen, onClose, onCompleteTask }) => {
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             <span style={{ fontSize: '12px', fontWeight: 600, color: 'var(--color-primary)' }}>+{task.xp} XP</span>
                             <button
-                                onClick={() => onCompleteTask(task)}
+                                onClick={() => task.premium ? onOpenGold() : onCompleteTask(task)}
                                 style={{
                                     background: task.premium ? 'linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%)' : 'var(--color-primary)',
                                     color: 'white',
@@ -115,10 +115,11 @@ const TaskModal = ({ isOpen, onClose, onCompleteTask }) => {
                                     fontWeight: 600,
                                     display: 'flex',
                                     alignItems: 'center',
-                                    gap: '4px'
+                                    gap: '4px',
+                                    cursor: 'pointer'
                                 }}
                             >
-                                Start <ArrowRight size={14} />
+                                {task.premium ? 'Unlock Gold' : 'Start'} <ArrowRight size={14} />
                             </button>
                         </div>
                     </div>

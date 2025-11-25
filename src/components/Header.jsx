@@ -19,7 +19,7 @@ const Header = ({ variant, setVariant }) => {
         {/* Unstop Logo */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
           <img
-            src="/logo.png"
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt="Unstop"
             style={{ height: '28px' }}
           />

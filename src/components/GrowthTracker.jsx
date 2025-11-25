@@ -126,6 +126,10 @@ const GrowthTracker = ({ streak, setStreak }) => {
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 onCompleteTask={handleCompleteTask}
+                onOpenGold={() => {
+                    setIsModalOpen(false);
+                    window.dispatchEvent(new CustomEvent('open-gold-modal'));
+                }}
             />
 
             <AIMentor
