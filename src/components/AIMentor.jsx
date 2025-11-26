@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MessageSquare, Send, X, Sparkles, Calendar, MapPin, Clock, ArrowRight, Crown, Users, Trophy, RefreshCw, CheckCircle } from 'lucide-react';
+import { MessageSquare, Send, X, Sparkles, Calendar, MapPin, Clock, ArrowRight, Crown, Users, Trophy, RefreshCw, CheckCircle, Bot } from 'lucide-react';
 
 const AIMentor = ({ isOpen, onClose, streak, track, onOpenGold }) => {
     const [messages, setMessages] = useState([]);
@@ -274,31 +274,35 @@ const AIMentor = ({ isOpen, onClose, streak, track, onOpenGold }) => {
     };
 
     if (!isOpen) return (
-        <button
-            onClick={onClose}
-            className="pulse-animation"
-            style={{
-                position: 'fixed',
-                bottom: '30px',
-                right: '30px',
-                width: '64px',
-                height: '64px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, #1C4980 0%, #0F2D52 100%)',
-                color: 'white',
-                border: '4px solid white',
-                boxShadow: '0 8px 24px rgba(28, 73, 128, 0.4)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                zIndex: 150,
-                cursor: 'pointer',
-                transition: 'transform 0.2s'
-            }}
-        >
-            <Sparkles size={28} />
-            <div style={{ position: 'absolute', top: 0, right: 0, width: '16px', height: '16px', background: '#F7941D', borderRadius: '50%', border: '2px solid white' }} />
-        </button>
+        <div style={{ position: 'fixed', bottom: '30px', right: '30px', zIndex: 150 }}>
+            <div className="ai-cta-bubble">
+                Ask NonStop!
+            </div>
+            <button
+                onClick={onClose}
+                className="pulse-animation"
+                style={{
+                    width: '64px',
+                    height: '64px',
+                    borderRadius: '50%',
+                    background: 'linear-gradient(135deg, #1C4980 0%, #0F2D52 100%)',
+                    color: 'white',
+                    border: '4px solid white',
+                    boxShadow: '0 8px 24px rgba(28, 73, 128, 0.4)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    transition: 'transform 0.2s',
+                    position: 'relative'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+                <Bot size={32} />
+                <div style={{ position: 'absolute', top: 0, right: 0, width: '16px', height: '16px', background: '#F7941D', borderRadius: '50%', border: '2px solid white' }} />
+            </button>
+        </div>
     );
 
     return (
